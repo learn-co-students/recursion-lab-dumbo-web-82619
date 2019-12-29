@@ -4,12 +4,11 @@ function printString(str) {
 }
 
 function reverseString(str) {
-  str.length === 1 ? str : reverseString(str.slice(1) + str[0])
-  // if (str.length < 2) {
-  //   return str
-  // } else {
-  //   return reverseString(str.slice(1)) + str[0]
-  // }
+  if (str.length < 2) {
+    return str
+  } else {
+    return reverseString(str.slice(1)) + str[0]
+  }
 }
 
 function isPalindrome(str) {
